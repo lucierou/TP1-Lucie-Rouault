@@ -1,6 +1,7 @@
 body {
     background-color: rgb(66, 66, 66);
     margin: 0;
+    padding-top: 5%;
 }
 
     #container {
@@ -9,7 +10,7 @@ body {
         margin: auto; 
         background-color: white;
         display: grid;
-        grid-template-columns: 500px 500px;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "img introduction";
         grid-column-gap: 0px;
         grid-row-gap: 0px;
@@ -18,7 +19,6 @@ body {
         
         img {
             grid-area: img;
-            /* min-width: 500px; */
         }
 
         #introduction {
@@ -26,7 +26,11 @@ body {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows : 50px 50px 50px 300px 50px;
-            grid-template-areas: "the" "h1" "hr" "texte" "button";
+            grid-template-areas: "the"
+                                  "h1" 
+                                  "hr" 
+                                  "texte" 
+                                  "button";
             padding: 10% 0;
         }
 
@@ -75,7 +79,7 @@ body {
                 color: grey;
             } 
 
-    @media screen and (min-width : 500px) and (max-width: 1000px)
+    @media screen and (max-width: 1000px)
 {
     body {
         width: 100vw;
@@ -84,20 +88,31 @@ body {
     }
 
         #container {
-            width: fit-content;
+            width: 100%;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat (2, 1fr);
             grid-template-areas: "img" "introduction";
-
+            margin : 0;
         }
 
             img {
-                min-width: 400px;
+                min-width: 100%;
                 height: auto;
             }
 
             #introduction {
-            width: 400px;
+                width: 100%;
+                height: auto;
+                grid-template-rows : repeat (5, 1fr);
+
             }
-        }
+
+                #texte { 
+                    grid-area: texte;
+                    color: rgb(140, 148, 154);
+                    font-size: 1.3em;
+                    padding: 0 30px;
+                    height: fit-content;
+                }
+}
