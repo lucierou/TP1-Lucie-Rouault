@@ -16,7 +16,7 @@ body {
         text-align: center;
         }
         
-        .img {
+        img {
             grid-area: img;
             min-width: 500px;
         }
@@ -92,8 +92,9 @@ body {
             grid-template-areas: "img" "introduction";
         }
 
-            .img {
-                width: 500px;
+            img {
+                min-width: 500px;
+                height: auto;
             }
 
             #introduction {
