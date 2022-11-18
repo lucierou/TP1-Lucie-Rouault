@@ -1,103 +1,51 @@
 body {
-    background-color: rgb(225, 231, 237);
-    padding: 50px 0;
+    background-color: rgb(66, 66, 66);
+    margin: 0;
 }
-
-    #container {
-        width: 1000px;
-        height: fit-content;
-        margin: auto; 
-        background-color: white;
-        display: grid;
-        grid-template-columns: 500px 500px;
-        grid-template-areas: "img introduction";
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        text-align: center;
-        }
-        
-        img {
-            grid-area: img;
-            min-width: 500px;
-        }
-
-        #introduction {
-            grid-area: introduction;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows : 50px 50px 50px 300px 50px;
-            /* grid-auto-rows: auto; */
-            grid-template-areas: "the" "h1" "hr" "texte" "button";
-            padding: 10% 0;
-        }
-
-            #the {
-                grid-area: the;
-                font-size: 1.5em;
-                font-style: italic;
-                font-weight: bold;
-                text-align: center;
-                margin: 0;
-            }
-
-            h1 { 
-                grid-area: h1; 
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 2.8em;
-                margin: 0;
-            }
-
-            hr {
-                grid-area: hr;
-                height: 3px;
-                width : 20%;
-                background-color: black;
-                margin-top: 25px;
-            }
-
-            #texte { 
-                grid-area: texte;
-                color: rgb(140, 148, 154);
-                font-size: 1.3em;
-                padding: 0 30px;
-            }
-
-            button { 
-                grid-area: button;
-                background-color: white;
-                width: fit-content;
-                height: fit-content;
-                padding: 20px 30px;
-                justify-self: center;
-                border-radius: 5px;
-                border-width: 0.5px;
-                border-color: lightgrey;
-                font-weight: bold;
-                color: grey;
-            } 
-
-    @media screen and (min-width : 500px) and (max-width: 1000px)
-{
-    body {
-        width: 100vw;
-        padding: 0;
-        margin: 0;
+    .block_body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Arial Narrow', Arial, sans-serif;
+        padding: 10%;
     }
 
-        #container {
-            width: 500px;
-            display: grid;
-            grid-template-columns: 500px;
-            grid-template-rows: repeat (2, 1fr);
-            grid-template-areas: "img" "introduction";
+        h1 { 
+            font-size: 2.8em;
+            color: white;
+            margin: 0;
         }
-
-            img {
-                min-width: 500px;
-                height: auto;
+            .fun {
+                font-weight: bold;
+                color: rgb(255, 100, 79);
+                font-size: 1.5em;
             }
 
-            #introduction {
-            width: 500px;
+        form {  
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(33, 33, 33);
+            color: white;
+            padding: 5%;
+        }
+            form p {
+                margin-bottom: 8px;
             }
-}
+            
+            #nom {
+                margin-top: 0;
+            }
+
+            form input {
+                height: 30px;
+                width: 275px;
+            }
+
+            button {
+                height: 30px; 
+                background-color: rgb(255, 100, 79);
+                color: white;
+                font-weight: 500;
+                border: none;
+            }
