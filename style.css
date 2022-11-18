@@ -18,7 +18,7 @@ body {
         
         img {
             grid-area: img;
-            min-width: 500px;
+            /* min-width: 500px; */
         }
 
         #introduction {
@@ -26,7 +26,6 @@ body {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows : 50px 50px 50px 300px 50px;
-            /* grid-auto-rows: auto; */
             grid-template-areas: "the" "h1" "hr" "texte" "button";
             padding: 10% 0;
         }
@@ -85,19 +84,20 @@ body {
     }
 
         #container {
-            width: 500px;
+            width: fit-content;
             display: grid;
-            grid-template-columns: 500px;
+            grid-template-columns: 1fr;
             grid-template-rows: repeat (2, 1fr);
             grid-template-areas: "img" "introduction";
+
         }
 
             img {
-                min-width: 500px;
+                min-width: 400px;
                 height: auto;
             }
 
             #introduction {
-            width: 500px;
+            width: 400px;
             }
 }
